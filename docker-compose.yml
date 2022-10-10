@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+
+  mysql:
+    container_name: studapart-db
+    image: mysql:5.7
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    command: mysqld --sql_mode=""
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_PASSWORD: 'root'
